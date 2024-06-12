@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'index.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+</head>
+<body>
+    <h1>BMI CALCULATOR</h1>
+    <br>
+    <form class="pure-form pure-form-aligned" method="POST">
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="aligned-name">Weight in Kilogram</label>
+            <input type="text" id="aligned-name" placeholder="weight" name="weight"/>
+            <span class="pure-form-message-inline">This is a required field.</span>
+        </div>
+        <div class="pure-control-group">
+            <label for="aligned-password">Height in kilogram</label>
+            <input type="text" id="aligned-password" placeholder="height"  name="height"/>
+            <span class="pure-form-message-inline">This is a required field.</span>
+        </div>
+        <div class="pure-control-group">
+            <label for="aligned-email">Email Address</label>
+            <input type="email" id="aligned-email" placeholder="Email Address" />
+        </div>
+        <div class="pure-control-group">
+            <label for="aligned-foo">Supercalifragilistic Label</label>
+            <input type="text" id="aligned-foo" placeholder="Enter something here..." />
+        </div>
+        <div class="pure-controls">
+            <label for="aligned-cb" class="pure-checkbox">
+                <input type="checkbox" id="aligned-cb" /> I&#x27;ve read the terms and conditions
+            </label>
+            <button type="submit" class="pure-button pure-button-primary" value="submit">Submit</button>
+        </div>
+    </fieldset>
+</form>
+<br>
+
+<div>
+    {% if bmi %}
+        <p>Your bmi is {{bmi}}</p>
+    {% endif %}
+</div>
+</body>
+</html>

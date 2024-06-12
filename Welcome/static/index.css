@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(139, 158, 158);
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-shadow: 6px 0px rgb(221, 22, 175);
+    padding: 20px;
+    border: 12px solid yellow;
+}

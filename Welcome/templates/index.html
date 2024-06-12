@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE±MADE BACKEND</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'index.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1>The Made Backend</h1>
+    <p>Welcome to the flask backend development</p>
+    <p>A Helping guide to css worth checking out is www.purecss.io</p>
+    <hr><hr>
+    <div>
+        <p>Please your name for recognition</p>
+        <form action="/" class="pure-form" method="POST">
+            Name: <br>
+            <input type="text" name="username"> <br>
+
+            Favorite Food: <br>
+            <input type="text" name="food"> <br>
+
+            <button type="submit" class="pure-button-primary" value="submit">
+                Submit
+            </button>
+        </form>
+    </div>
+
+    <br>
+    <div>
+        {% if name %}
+            <p>Welcome to my backend site {{name}}</p>
+        {% endif %}  
+    </div>
+
+     <br>
+    <div>
+        {% if food %}
+            <p>Your favorite food is {{food}}</p>
+        {% endif %}  
+    </div>
+   
+</body>
+</html>
